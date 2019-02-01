@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
+    
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <title>Projet Simple</title>
+    <title>Projet Simple PAF </title>
 </head>
 <body>
-<div id="simple">
+<div id="jambon">
     <div class="row">
-        <button v-on:click="recuperedPosts" style="display : block;">Activer</button>
+        <button v-on:click="recuperedPosts" style="display : block;">Go go team</button>
         <div v-for= "post in posts" class="d-none col-sm-3 d-sm-block">               
         <div class="col-sm-8 offset-sm-1">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 25rem;">
             <div class="card-body">
               <h5 class="card-title">{{post.title.rendered}}</h5>
-              <a :href="post.link" class="btn btn-primary" style="background-color:blue">Lien</a>
+              <a :href="post.link" class="btn btn-primary" style="background-color:blue">Voir l'article</a>
             </div>
           </div></div>
     </div>
 </div>
 
     <script>
+
         var demo = new Vue({
-        el: '#simple',
+        el: '#jambon',
         data:{
             posts: []
         },
