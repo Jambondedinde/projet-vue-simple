@@ -9,14 +9,21 @@
     <title>Projet Simple PAF </title>
 </head>
 <body>
+<!--l'id #simple sert à se relier à el:'#simple' dans la function -->
 <div id="jambon">
     <div class="row">
+        <!--Au clic, lance la fonction recuperedPosts  -->
         <button v-on:click="recuperedPosts" style="display : block;">Go go team</button>
+
+        <!-- v-for fait une boucle pour récupérer le "post" dans le tableau "posts" dans la fonction -->
         <div v-for= "post in posts" class="d-none col-12 col-sm-3 d-block">               
         <div class="col-sm-8 offset-sm-1">
             <div class="card" style="width: 25rem;">
             <div class="card-body">
+                <!-- v-html sert à encoder les caractères non décoder et afficher le titre -->
               <h5 class="card-title" v-html="post.title.rendered"></h5>
+
+              <!-- :href les : servent à ce que Vue.js l'interprète et aille chercher le lien -->
               <a :href="post.link" class="btn btn-primary" style="background-color:blue">Voir l'article</a>
             </div>
           </div></div>
